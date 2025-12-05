@@ -140,7 +140,7 @@ body {
     background: linear-gradient(to right, var(--white), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: white;
 }
 
 .about-grid {
@@ -189,7 +189,7 @@ body {
     background: linear-gradient(to right, var(--white), var(--secondary-color));
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color: white;
 }
 
 .cards-grid {
