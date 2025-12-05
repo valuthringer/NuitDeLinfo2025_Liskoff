@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>La Boutique NIRD - Consommez Responsable</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/boutique.css" />
+	</head>
+	<body>
+		<div class="background-blobs">
+			<div class="blob blob-1"></div>
+			<div class="blob blob-2"></div>
+			<div class="blob blob-3"></div>
+		</div>
+
+		<header>
+			<nav>
+				<a href="home.html" class="logo"> <span>🌱</span> NIRD </a>
+				<ul class="nav-links">
+					<li><a href="home.html">Accueil</a></li>
+					<li><a href="boutique.html" class="active">Boutique</a></li>
+					<li><a href="formation.html">Formation</a></li>
+					<li><a href="qcm.html">QCM</a></li>
+					<li><a href="roleplay.html">Jeu de Rôle</a></li>
+					<li><a href="degueu.html" style="color: #e57373">Mode Dégueu</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="boutique-container">
+			<section class="shop-header">
+				<h1>La Boutique du Numérique</h1>
+				<p>
+					Chaque achat a un impact. Choisissez judicieusement pour augmenter
+					votre Score NIRD.
+				</p>
+
+				<div class="filters">
+					<button class="filter-btn active" data-filter="all">Tout</button>
+					<button class="filter-btn" data-filter="Laptop">Ordinateurs</button>
+					<button class="filter-btn" data-filter="Smartphone">
+						Smartphones
+					</button>
+					<button class="filter-btn" data-filter="Composant">Composants</button>
+					<button class="filter-btn" data-filter="Logiciel">Logiciels</button>
+				</div>
+			</section>
+
+			<div class="shop-layout">
+				<section class="products-grid" id="products-grid"></section>
+
+				<aside class="cart-sidebar">
+					<div class="cart-sticky">
+						<h2>Votre Panier</h2>
+						<div id="cart-items" class="cart-items">
+							<p class="empty-cart">Votre panier est vide.</p>
+						</div>
+						<div class="cart-summary">
+							<div class="summary-row">
+								<span>Total Articles:</span>
+								<span id="cart-count">0</span>
+							</div>
+							<button id="checkout-btn" class="checkout-btn" disabled>
+								Valider la commande
+							</button>
+							<button id="clear-cart-btn" class="clear-btn">
+								Vider le panier
+							</button>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</main>
+
+		<script src="scripts/products.js"></script>
+		<script src="scripts/global.js"></script>
+		<script src="scripts/boutique.js"></script>
+	</body>
+</html>
