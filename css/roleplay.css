@@ -1,0 +1,176 @@
+/* Game Container */
+#game-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 2rem auto;
+    background-color: #000;
+    border: 4px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Layers */
+#background-layer,
+#character-layer,
+#ui-layer,
+#start-screen,
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Let clicks pass through by default */
+}
+
+#ui-layer,
+#start-screen,
+#game-over-screen {
+    pointer-events: auto;
+    /* Re-enable clicks for UI */
+}
+
+/* Background */
+#bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+/* Character */
+#character-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 80%;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#character-img.hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+}
+
+/* UI Elements */
+#stats-bar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #555;
+}
+
+#dialogue-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#dialogue-box.hidden {
+    display: none;
+}
+
+#speaker-name {
+    font-weight: bold;
+    color: #ffd700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#dialogue-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    min-height: 60px;
+}
+
+/* Choices */
+#choices-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choice-btn {
+    background: #333;
+    color: #fff;
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.choice-btn:hover {
+    background: #555;
+    border-color: #fff;
+    transform: translateX(5px);
+}
+
+/* Screens */
+#start-screen,
+#game-over-screen {
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    z-index: 100;
+}
+
+#start-screen h1,
+#game-over-screen h2 {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffd700;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-shadow: 4px 4px 0 #ff0000;
+}
+
+.game-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    transition: transform 0.1s;
+    box-shadow: 0 5px 0 #990000;
+}
+
+.game-btn:active {
+    transform: translateY(5px);
+    box-shadow: none;
+}
+
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CEO Simulator 2025 - Chaos Edition</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/roleplay.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="home.html" class="logo"> <span>🌱</span> NIRD </a>
+				<ul class="nav-links">
+					<li><a href="home.html">Accueil</a></li>
+					<li><a href="boutique.html">Boutique</a></li>
+					<li><a href="formation.html">Formation</a></li>
+					<li><a href="qcm.html">QCM</a></li>
+					<li><a href="roleplay.html" class="active">Jeu de Rôle</a></li>
+					<li><a href="degueu.html" style="color: #e57373">Mode Dégueu</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<div id="game-container">
+				<div id="background-layer">
+					<img
+						src="assets/roleplay/office_bg.png"
+						alt="Office Background"
+						id="bg-img"
+					/>
+				</div>
+
+				<div id="character-layer">
+					<img src="" alt="Character" id="character-img" class="hidden" />
+				</div>
+
+				<div id="ui-layer">
+					<div id="stats-bar">
+						<div class="stat">
+							<span class="icon">💰</span>
+							<span id="money-stat">1,000,000 €</span>
+						</div>
+						<div class="stat">
+							<span class="icon">🔥</span>
+							<span id="chaos-stat">0% Chaos</span>
+						</div>
+					</div>
+
+					<div id="dialogue-box" class="hidden">
+						<div id="speaker-name">HR Manager</div>
+						<p id="dialogue-text">Monsieur le PDG, nous avons un problème...</p>
+						<div id="choices-container">
+							<!-- Buttons will be injected here -->
+						</div>
+					</div>
+				</div>
+
+				<div id="start-screen">
+					<h1>CEO SIMULATOR 2025</h1>
+					<p>Prenez les pires décisions possibles (ou pas).</p>
+					<button id="start-btn" class="game-btn">COMMENCER LE CHAOS</button>
+				</div>
+
+				<div id="game-over-screen" class="hidden">
+					<h2 id="end-title">GAME OVER</h2>
+					<p id="end-message">Vous avez ruiné l'entreprise !</p>
+					<button id="restart-btn" class="game-btn">REJOUER</button>
+				</div>
+			</div>
+		</main>
+
+		<script src="scripts/global.js"></script>
+		<script src="scripts/roleplay.js"></script>
+	</body>
+</html>
