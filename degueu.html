@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRD // SYSTEM_ROOT</title>
+    <link rel="stylesheet" href="css/degueu.css">
+</head>
+<body>
+    <canvas id="matrix"></canvas>
+
+    <div class="mainframe">
+        <header>
+            <div>
+                <h1>NIRD_OS v2.0</h1>
+                <div class="status-bar">SERVER: ONLINE | ENCRYPTION: 2048-BIT</div>
+            </div>
+            <nav>
+                <a href="home.html">EXIT</a>
+            </nav>
+        </header>
+
+        <div class="marquee-container">
+            <marquee scrollamount="10">*** ALERT: BIG TECH SURVEILLANCE DETECTED *** INITIATING COUNTER-MEASURES *** JOIN THE RESISTANCE *** FREE YOUR MIND ***</marquee>
+        </div>
+
+        <main>
+            <div class="module">
+                <h2>> MANIFESTO.TXT</h2>
+                <p>The system is broken. Schools are dependent on the Empire.</p>
+                <p>We are the bug in the code. The glitch in the matrix.</p>
+                <p>NIRD is the patch.</p>
+                <br>
+                <p class="glitch">> UPLOAD_PROGRESS: 99%</p>
+            </div>
+
+            <div class="module">
+                <h2>> TARGETS</h2>
+                <ul>
+                    <li>[ ] OBSOLESCENCE</li>
+                    <li>[ ] PROPRIETARY_SOFTWARE</li>
+                    <li>[ ] DATA_MINING</li>
+                    <li>[x] FREEDOM</li>
+                </ul>
+            </div>
+
+            <div class="module">
+                <h2>> PROTOCOLS</h2>
+                <p><strong>INCLUSIVE.EXE</strong> - Access for all nodes.</p>
+                <p><strong>RESPONSIBLE.BAT</strong> - Secure the data stream.</p>
+                <p><strong>SUSTAINABLE.SH</strong> - Hardware longevity optimized.</p>
+            </div>
+
+            <div class="module">
+                <h2>> NAVIGATION_GRID</h2>
+                <div style="display: grid; gap: 10px;">
+                    <a href="boutique.html">> ACCESS_BLACK_MARKET (Boutique)</a>
+                    <a href="formation.html">> DOWNLOAD_SKILLS (Formation)</a>
+                    <a href="qcm.html">> VERIFY_INTEGRITY (QCM)</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            > TERMINAL_ID: <span id="term-id"></span> | © 2025 NIRD_UNDERGROUND
+        </footer>
+    </div>
+
+    <script src="scripts/matrix.js"></script>
+    <script>
+        document.getElementById('term-id').innerText = Math.floor(Math.random() * 999999);
+    </script>
+</body>
+</html>
